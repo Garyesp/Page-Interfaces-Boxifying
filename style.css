@@ -1,0 +1,153 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.header .item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header img {
+    height: 50px;
+    width: auto;
+}
+
+.icon {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu .item {
+    padding: 8px 0;
+}
+
+.menu .item:first-child {
+    font-weight: bold;
+}
+
+.body-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 60px 0;
+    min-height: 400px;
+}
+
+.banner-section, .form-section {
+    flex: 1;
+    max-width: 400px;
+}
+
+.texto-banner-centrado-iz {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.texto-banner {
+    font-size: 18px;
+}
+
+.titulo-banner {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.boton {
+    background: #000;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.form-container {
+    background: #f5f5f5;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.form-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.vehicle-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-button {
+    background: #000;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .header-top, .header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .menu {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+    
+    .body-content {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .banner-section, .form-section {
+        max-width: 100%;
+    }
+}
