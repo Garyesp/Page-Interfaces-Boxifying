@@ -1,9 +1,10 @@
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 10px;
 }
 
+/* Header Superior */
 .header-top {
     display: flex;
     justify-content: space-between;
@@ -12,6 +13,7 @@
     font-size: 14px;
 }
 
+/* Header Principal */
 .header {
     display: flex;
     justify-content: space-between;
@@ -27,7 +29,8 @@
 
 .header img {
     height: 50px;
-    width: auto;
+    width: 300px;
+     border: 1px solid #ddd;
 }
 
 .icon {
@@ -36,6 +39,7 @@
     border-radius: 4px;
 }
 
+/* Menú */
 .menu {
     display: flex;
     justify-content: center;
@@ -51,35 +55,44 @@
 
 .menu .item:first-child {
     font-weight: bold;
+    color: #d32f2f;
 }
 
-.body-content {
+/* Sección Principal - Banner y Formulario */
+.section2 {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 50px;
     padding: 60px 0;
     min-height: 400px;
 }
 
-.banner-section, .form-section {
+.banner-section {
     flex: 1;
-    max-width: 400px;
+    background: #f5f5f5;
+    padding: 40px;
+    border-radius: 8px;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
 }
 
-.texto-banner-centrado-iz {
+.banner-section-contenido {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 
-.texto-banner {
+.banner-section-contenido-texto {
     font-size: 18px;
+    color: #666;
 }
 
-.titulo-banner {
+.banner-section-contenido-titulo {
     font-size: 32px;
     font-weight: bold;
+    color: #000;
 }
 
 .boton {
@@ -90,6 +103,16 @@
     border-radius: 4px;
     cursor: pointer;
     width: fit-content;
+}
+
+.boton:hover {
+    background: #d32f2f;
+}
+
+/* Formulario */
+.form-section {
+    flex: 1;
+    max-width: 400px;
 }
 
 .form-container {
@@ -118,16 +141,123 @@
     font-size: 16px;
 }
 
-.form-button {
-    background: #000;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+/* Sección Ventajas */
+.section3 {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px 0;
+}
+
+.ventaja {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+}
+
+.icono_m {
+    height: 60px;
+    width: 60px;
+    margin: 0 auto 15px auto;
+    background: #f5f5f5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ventaja-titulo {
+    font-weight: bold;
+    margin-bottom: 10px;
     font-size: 16px;
 }
 
+.ventaja-texto {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Sección Banners Promocionales */
+.section4 {
+    display: flex;
+    gap: 20px;
+    padding: 40px 0;
+}
+
+.section4 .banner-section {
+    flex: 1;
+    background: #000;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section4 .banner-section-contenido-titulo {
+    color: white;
+    font-size: 28px;
+}
+
+.section4 .banner-section:first-child {
+    background: #f5f5f5;
+}
+
+.section4 .banner-section:first-child .banner-section-contenido-titulo {
+    color: #000;
+}
+
+/* Sección Marcas */
+.section5 {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.section-titulo {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.section-subtitulo {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.marcas {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.marcas-logo {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+     background: #f5f5f5;
+}
+
+.marcas-logo img {
+    height: 40px;
+    width: auto;
+    background: #f5f5f5;
+     border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 4px;
+     min-width: 100px;
+    min-height: 60px;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
     .header-top, .header {
         flex-direction: column;
@@ -141,10 +271,18 @@
         justify-content: center;
     }
     
-    .body-content {
+    .section2 {
         flex-direction: column;
         gap: 30px;
         text-align: center;
+    }
+    
+    .section3, .section4 {
+        flex-direction: column;
+    }
+    
+    .marcas-logo {
+        gap: 15px;
     }
     
     .banner-section, .form-section {
